@@ -1,7 +1,8 @@
 import axios from "./axios";
 import React, { useEffect, useState } from "react";
+import LinkImg from "./LinkImg";
 
-const Row = ({ title, fetchUrl }) => {
+const Row = ({ title, fetchUrl, ofTv = false }) => {
   const [movies, setMovies] = useState(null);
   useEffect(() => {
     (async function () {
@@ -13,13 +14,8 @@ const Row = ({ title, fetchUrl }) => {
     <div className="row">
       <h3>{title}</h3>
       <div className="posters">
-        {movies?.map((movie) => (
-          <img
-            key={movie.id}
-            className={`row_poster`}
-            src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
-            alt={movie.name}
-          />
+        {movies?.map((e) => (
+          <LinkImg key={e.id} e={e} type={ofTv ? "tv" : "movie"} />
         ))}
       </div>
     </div>
