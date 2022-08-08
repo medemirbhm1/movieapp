@@ -55,24 +55,22 @@ function Details() {
           <div className="sec">
             <h2>Seasons : </h2>
             <div className="row">
-              {details.seasons.map(
-                ({ id, poster_path, name, air_date }) => (
-                  <div
-                    key={id}
-                    className="image"
-                    style={{
-                      backgroundImage: `url("https://image.tmdb.org/t/p/original/${poster_path}")`,
-                      backgroundSize: "cover",
-                      backgroundPosition: "center center",
-                    }}
-                  >
-                    <div className="info">
-                      <h3>{name}</h3>
-                      <span className="airdate">{air_date}</span>
-                    </div>
+              {details.seasons.map(({ id, poster_path, name, air_date }) => (
+                <div
+                  key={id}
+                  className="image"
+                  style={{
+                    bb2AUlX5ZGvNJDQxHlly1cnQ64fM2ackgroundImage: `url("https://image.tmdb.org/t/p/original/${poster_path}")`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center center",
+                  }}
+                >
+                  <div className="info">
+                    <h3>{name}</h3>
+                    <span className="airdate">{air_date}</span>
                   </div>
-                )
-              )}
+                </div>
+              ))}
             </div>
           </div>
         ) : null}
