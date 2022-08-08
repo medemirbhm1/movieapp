@@ -56,7 +56,7 @@ function Details() {
             <h2>Seasons : </h2>
             <div className="row">
               {details.seasons.map(
-                ({ id, poster_path, season_number, air_date }) => (
+                ({ id, poster_path, name, air_date }) => (
                   <div
                     key={id}
                     className="image"
@@ -67,7 +67,7 @@ function Details() {
                     }}
                   >
                     <div className="info">
-                      <h3>Season {season_number}</h3>
+                      <h3>{name}</h3>
                       <span className="airdate">{air_date}</span>
                     </div>
                   </div>

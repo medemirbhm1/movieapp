@@ -3,8 +3,8 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "./axios";
 import requests from "./requests";
-import { faCirclePlay } from "@fortawesome/free-regular-svg-icons";
 import "./scss/banner.scss";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 function truncate(str) {
   return str.length > 150 ? str.substr(0, 149) + "..." : str;
@@ -39,9 +39,9 @@ const Banner = () => {
           <span className="year">{movie.first_air_date.slice(0, 4)}</span>
         </div>
         <p className="desc">{truncate(movie?.overview)}</p>
-        <Link to="/">
+        <Link to={`/details/tv/${movie.id}`}>
           <button className="btn">
-            <FontAwesomeIcon icon={faCirclePlay} /> Trailer
+            <FontAwesomeIcon icon={faPlus} /> More
           </button>
         </Link>
       </div>
