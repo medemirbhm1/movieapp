@@ -60,7 +60,7 @@ function Details() {
                   key={id}
                   className="image"
                   style={{
-                    bb2AUlX5ZGvNJDQxHlly1cnQ64fM2ackgroundImage: `url("https://image.tmdb.org/t/p/original/${poster_path}")`,
+                    backgroundImage: `url("https://image.tmdb.org/t/p/original/${poster_path}")`,
                     backgroundSize: "cover",
                     backgroundPosition: "center center",
                   }}
