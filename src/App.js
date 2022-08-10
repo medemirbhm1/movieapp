@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
-  useNavigate,
 } from "react-router-dom";
 import Home from "./Home";
 import Search from "./Search";
@@ -12,10 +11,6 @@ import "./scss/app.scss";
 import Details from "./Details";
 
 const App = () => {
-  const navigate = useNavigate("");
-  useState(() => {
-    navigate("/");
-  }, []);
   return (
     <div className="app">
       <React.StrictMode>
